@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Summary</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            max-width: 800px;
+            margin: 20px auto;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            font-family: "Trebuchet MS", sans-serif;
+        }
+
+        .image-container {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .image-container img {
+            width: 50%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .description-container {
+            flex: 1;
+            padding: 20px;
+            background-color: #f9f9f9;
+            font-family: "Trebuchet MS", sans-serif;
+            font-size: 20px;
+        }
+
+        .copy-button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .copy-button.copied {
+            background-color: #28a745; /* Green */
+        }
+
+        .copy-info {
+            font-size: 14px;
+            color: #28a745;
+            margin-left: 10px;
+            font-weight: bold;
+            display: none; /* Hidden initially */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Product 1: Tracksuit -->
+    <!-- <div class="container">
+        <div class="image-container">
+            <img src="https://www.gripactive.com/cdn/shop/files/Tracksuit-Black_bd9b4e75-98c1-4a51-893c-e99c6f2704c5.webp?v=1736246534&width=900" alt="Tracksuit">
+        </div>
+        <div class="description-container">
+            <p id="desc-1">1/4 Zip Tracksuit Adult - Black/white (Fabric - Terry fleece) <br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-1', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div> -->
+
+    <!-- Product 2: Match Kit Youth-->
+    <div class="container">
+        <div class="image-container">
+            <img src="https://www.gripactive.com/cdn/shop/files/berks-united-fc-match-kit-2.jpg?v=1704986444&width=900" alt="Image">
+        </div>
+        <div class="description-container">
+            <p id="desc-2">Match Kit Youth – Color (Jersey, Short, Socks)<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-2', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+
+    <!-- Product 3: Match Kit Adult -->
+    <div class="container">
+        <div class="image-container">
+            <img src="https://www.gripactive.com/cdn/shop/files/Shorts-Red.webp?v=1736246534&width=900" alt="Image">
+        </div>
+        <div class="description-container">
+            <p id="desc-3">Match Kit Adult – Color (Jersey, Short, Socks)<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-3', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://www.gripactive.com/cdn/shop/files/Shorts-Red.webp?v=1736246534&width=900" alt="Image">
+        </div>
+        <div class="description-container">
+            <p id="desc-4">Goalkeeper Kit Youth – Color (Jersey, Short, Socks)<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-4', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://www.gripactive.com/cdn/shop/files/Shorts-Red.webp?v=1736246534&width=900" alt="Image">
+        </div>
+        <div class="description-container">
+            <p id="desc-5">Goalkeeper Kit Adult – Color (Jersey, Short, Socks)<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-5', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://www.gripactive.com/cdn/shop/files/Shorts-Red.webp?v=1736246534&width=900" alt="Image">
+        </div>
+        <div class="description-container">
+            <p id="desc-6">Home Kit Adult – Color (Jersey, Short, Socks)<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-6', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://www.gripactive.com/cdn/shop/files/Shorts-Red.webp?v=1736246534&width=900" alt="Image">
+        </div>
+        <div class="description-container">
+            <p id="desc-7">Home Kit Youth – Color (Jersey, Short, Socks)<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-7', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://www.gripactive.com/cdn/shop/files/Shorts-Red.webp?v=1736246534&width=900" alt="Image">
+        </div>
+        <div class="description-container">
+            <p id="desc-8">Away Kit Adult – Color (Jersey, Short, Socks)<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-8', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://www.gripactive.com/cdn/shop/files/Shorts-Red.webp?v=1736246534&width=900" alt="Image">
+        </div>
+        <div class="description-container">
+            <p id="desc-9">Away Kit Youth – Color (Jersey, Short, Socks)<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-9', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://www.gripactive.com/cdn/shop/files/Shorts-Red.webp?v=1736246534&width=900" alt="Image">
+        </div>
+        <div class="description-container">
+            <p id="desc-10">Home Goalkeeper Kit Adult – Color (Jersey, Short, Socks)<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-10', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://www.gripactive.com/cdn/shop/files/Shorts-Red.webp?v=1736246534&width=900" alt="Image">
+        </div>
+        <div class="description-container">
+            <p id="desc-11">Home Goalkeeper Kit Youth – Color (Jersey, Short, Socks)<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-11', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://www.gripactive.com/cdn/shop/files/Shorts-Red.webp?v=1736246534&width=900" alt="Image">
+        </div>
+        <div class="description-container">
+            <p id="desc-12">Away Goalkeeper Kit Adult – Color (Jersey, Short, Socks)<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-12', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://www.gripactive.com/cdn/shop/files/Shorts-Red.webp?v=1736246534&width=900" alt="Image">
+        </div>
+        <div class="description-container">
+            <p id="desc-13">Away Goalkeeper Kit Youth – Color (Jersey, Short, Socks)<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-13', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <!-- Tracksuit  -->
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Quarter Zip Tracksuit Purple.jpg" alt="Image">
+        </div>
+        <div class="description-container">
+            <p id="desc-14">1/4 Zip Tracksuit Adult - Color (Fabric - Terry Fleece)<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-14', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Quarter Zip Tracksuit yellow.jpg" alt="Image">
+        </div>
+        <div class="description-container">
+            <p id="desc-15">1/4 Zip Tracksuit Youth - Color (Fabric - Terry Fleece)<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-15', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Full Zip Tracksuit.jpg" alt="Image">
+        </div>
+        <div class="description-container">
+            <p id="desc-16">Full Zip Tracksuit Youth/Adult - Color (Fabric - Terry Fleece)<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-16', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Midlayer2.jpg" alt="Image">
+        </div>
+        <div class="description-container">
+            <p id="desc-17">1/4 Zip Midlayer Adult - Color (Fabric - Terry Fleece)<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-17', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+        
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Midlayer2.jpg" alt="Image">
+        </div>
+        <div class="description-container">
+            <p id="desc-18">1/4 Zip Midlayer Youth - Color (Fabric - Terry Fleece)<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-18', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+        
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Full Zip Midlayer .jpg" alt="Image">
+        </div>
+        <div class="description-container">
+            <p id="desc-19">Full Zip Midlayer Youth/Adult - Color (Fabric - Terry Fleece)<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-19', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+        
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Tracksuit_Top.png" alt="Tracksuit_Top">
+        </div>
+        <div class="description-container">
+            <p id="desc-20">1/4 Tracksuit Top Adult - Color (Fabric - Terry Fleece)<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-20', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+        
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Tracksuit_Top.png" alt="Tracksuit_Top">
+        </div>
+        <div class="description-container">
+            <p id="desc-21">1/4 Tracksuit Top Youth - Color (Fabric - Terry Fleece)<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-21', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+        
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Baselayer.jpg" alt="Baselayer">
+        </div>
+        <div class="description-container">
+            <p id="desc-22">Baselayer Adult - Color  <br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-22', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+        
+    </div>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Padded Jacket.jpg" alt="Padded_Jacket">
+        </div>
+        <div class="description-container">
+            <p id="desc-23">Padded Jacket Adult - Color<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-23', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+        
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Long_Padded_Jacket.png" alt="Padded_Jacket">
+        </div>
+        <div class="description-container">
+            <p id="desc-24">Long Padded Jacket Adult - Color<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-24', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Rainshell_Jacket.jpg" alt="Padded_Jacket">
+        </div>
+        <div class="description-container">
+            <p id="desc-25">Rainshell Jacket Adult/Youth - Color<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-25', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Hoodie_and_Trouser_Adult.jpg" alt="Padded_Jacket">
+        </div>
+        <div class="description-container">
+            <p id="desc-26">Hoodie and Trouser Adult - Color<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-26', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Padded_Jacket_and_Trouser_Adult.jpeg" alt="Padded_Jacket">
+        </div>
+        <div class="description-container">
+            <p id="desc-27">Padded_Jacket and Trouser Adult - Color<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-27', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Jersey_and_Pocketed_Short.jpg" alt="Padded_Jacket">
+        </div>
+        <div class="description-container">
+            <p id="desc-28">Jersey and Pocketed Short Adult - Color<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-28', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Training Jersey and Short.jpg" alt="Padded_Jacket">
+        </div>
+        <div class="description-container">
+            <p id="desc-29">Training Jersey and Short Adult - Color<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-29', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Hoodie.jpg" alt="Padded_Jacket">
+        </div>
+        <div class="description-container">
+            <p id="desc-30">Hoodie Adult/Youth - Color<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-30', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Rugby_Jersey.jpg" alt="Padded_Jacket">
+        </div>
+        <div class="description-container">
+            <p id="desc-31">Rugby Jersey Adult - Color<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-31', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Polo Shirt.jpg" alt="Padded_Jacket">
+        </div>
+        <div class="description-container">
+            <p id="desc-32">Polo Shirt Adult/Youth - Color<br>Club Logo Sublimation (Printed Logo)</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-32', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <!-- empty container for seprate  -->
+    <div class="container">
+        <!-- <div class="image-container"> -->
+            <!-- <img src="/Assets/Images/Polo Shirt.jpg" alt="Padded_Jacket"> -->
+        <!-- </div> -->
+         <p>Without Club Logo Sublimation </p>
+        <!-- <div class="description-container"> -->
+            <!-- <p id="desc-32"><br></p> -->
+            <!-- <button class="copy-button" onclick="copyWithFormatting('desc-32', this)">Copy summary name</button> -->
+            <!-- <span class="copy-info">Copied!</span> -->
+        <!-- </div> -->
+    </div>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Bobble Hat Adult.jpg" alt="Bobble">
+        </div>
+        <div class="description-container">
+            <p id="desc-33">Bobble Hat Adult/Youth- Color</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-33', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Beanie Hat Adult.jpg" alt="Bobble">
+        </div>
+        <div class="description-container">
+            <p id="desc-34">Beanie Hat Adult/Youth- Color</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-34', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Assets/Images/Snood.jpg" alt="Bobble">
+        </div>
+        <div class="description-container">
+            <p id="desc-35">Snood Adult/Youth- Color</p>
+            <button class="copy-button" onclick="copyWithFormatting('desc-35', this)">Copy summary name</button>
+            <span class="copy-info">Copied!</span>
+        </div>
+    </div>
+        
+    <script>
+        function copyWithFormatting(elementId, buttonElement) {
+            let text = document.getElementById(elementId).innerText;
+            let htmlContent = `<span style="font-family: 'Trebuchet MS'; font-size: 20px;">${text}</span>`;
+
+            // Copy text as HTML (Rich Text)
+            navigator.clipboard.write([
+                new ClipboardItem({
+                    "text/html": new Blob([htmlContent], { type: "text/html" }),
+                    "text/plain": new Blob([text], { type: "text/plain" })
+                })
+            ]).then(() => {
+                // Change button color & show copied message
+                buttonElement.classList.add("copied");
+                let infoText = buttonElement.nextElementSibling;
+                infoText.style.display = "inline"; // Show "Copied!" text
+
+                // Reset button after 2 seconds
+                setTimeout(() => {
+                    buttonElement.classList.remove("copied");
+                    infoText.style.display = "none"; // Hide text again
+                }, 2000);
+            }).catch(err => {
+                console.error("Copy failed: ", err);
+            });
+        }
+    </script>
+
+</body>
+</html>
